@@ -42,6 +42,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (!form.checkValidity()) { form.reportValidity(); return; }
   note.hidden = false;
-  form.querySelector('button[type="submit"]').textContent = 'Demande envoyée ✓';
+  const sent = document.documentElement.lang === 'en' ? 'Request sent ✓' : 'Demande envoyée ✓';
+  form.querySelector('button[type="submit"]').textContent = sent;
   form.querySelectorAll('input, select, textarea').forEach(el => (el.disabled = true));
 });
