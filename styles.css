@@ -110,9 +110,12 @@ img, svg { display: block; max-width: 100%; }
    HERO
    ============================================================ */
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding: 7rem 0 4rem; }
-.hero__scene { position: absolute; inset: 0; z-index: 0; }
-.hero__landscape { width: 100%; height: 100%; }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(26,49,35,0.55) 0%, rgba(26,49,35,0.15) 55%, transparent 80%); z-index: 1; }
+.hero__scene { position: absolute; inset: 0; z-index: 0; background: var(--forest-deep); }
+.hero__img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(100deg, rgba(18,36,26,0.78) 0%, rgba(18,36,26,0.42) 48%, rgba(18,36,26,0.08) 78%, transparent 100%),
+    linear-gradient(0deg, rgba(18,36,26,0.55) 0%, transparent 34%); }
 
 .hero__content { position: relative; z-index: 3; width: min(var(--maxw), 92%); margin-inline: auto; color: var(--white); max-width: 760px; }
 .hero__title { font-size: clamp(2.6rem, 6.4vw, 5rem); color: var(--white); font-weight: 500; text-shadow: 0 2px 24px rgba(26,49,35,0.4); }
@@ -151,7 +154,7 @@ img, svg { display: block; max-width: 100%; }
 
 .concept__visual { position: relative; display: grid; grid-template-columns: 1fr; gap: 0; height: 100%; }
 .photo { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
-.photo svg { width: 100%; height: 100%; object-fit: cover; }
+.photo svg, .photo img { width: 100%; height: 100%; object-fit: cover; }
 .photo[data-caption]::after { content: attr(data-caption); position: absolute; left: 14px; bottom: 12px; background: rgba(26,49,35,0.72); color: #fff; font-size: 0.78rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 100px; backdrop-filter: blur(4px); }
 .photo--tall { aspect-ratio: 4/5; }
 .photo--small { position: absolute; width: 62%; aspect-ratio: 3/2.2; right: -8%; bottom: -8%; border: 6px solid var(--cream); }
@@ -227,7 +230,7 @@ img, svg { display: block; max-width: 100%; }
 .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff5b5b; animation: pulse 1.4s infinite; }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 .app-ui__cam { height: 118px; }
-.app-ui__cam svg { width: 100%; height: 100%; }
+.app-ui__cam svg, .app-ui__cam img { width: 100%; height: 100%; object-fit: cover; }
 .app-ui__mood { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; }
 .mood { background: var(--white); border-radius: 12px; padding: 0.5rem 0.2rem; text-align: center; box-shadow: var(--shadow-sm); }
 .mood span { font-size: 1.1rem; display: block; }

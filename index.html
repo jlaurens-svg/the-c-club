@@ -38,39 +38,7 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="accueil">
     <div class="hero__scene" aria-hidden="true">
-      <svg class="hero__landscape" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax slice">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#f6e7cf"/>
-            <stop offset="0.55" stop-color="#f3ddc2"/>
-            <stop offset="1" stop-color="#eecfae"/>
-          </linearGradient>
-          <linearGradient id="hillFar" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#8fa98a"/><stop offset="1" stop-color="#7c9a7a"/>
-          </linearGradient>
-          <linearGradient id="hillMid" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#5f8163"/><stop offset="1" stop-color="#4f7256"/>
-          </linearGradient>
-          <linearGradient id="hillNear" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#33543f"/><stop offset="1" stop-color="#274634"/>
-          </linearGradient>
-        </defs>
-        <rect width="1440" height="640" fill="url(#sky)"/>
-        <circle cx="1140" cy="150" r="70" fill="#f7edd8" opacity="0.9"/>
-        <circle cx="1140" cy="150" r="105" fill="#f7edd8" opacity="0.35"/>
-        <!-- far hills -->
-        <path d="M0 300 C 240 250 380 300 560 275 C 760 248 900 300 1120 268 C 1280 245 1380 285 1440 270 L1440 640 L0 640 Z" fill="url(#hillFar)"/>
-        <!-- mid hills -->
-        <path d="M0 380 C 220 330 420 400 640 360 C 880 316 1040 405 1260 360 C 1350 342 1410 372 1440 360 L1440 640 L0 640 Z" fill="url(#hillMid)"/>
-        <!-- near hill / park -->
-        <path d="M0 470 C 260 420 460 490 720 470 C 980 450 1180 505 1440 465 L1440 640 L0 640 Z" fill="url(#hillNear)"/>
-        <!-- cypress trees (Riviera) -->
-        <g fill="#20402f">
-          <ellipse cx="180" cy="450" rx="16" ry="70"/><ellipse cx="230" cy="465" rx="13" ry="55"/>
-          <ellipse cx="1230" cy="440" rx="17" ry="78"/><ellipse cx="1285" cy="458" rx="12" ry="58"/>
-          <ellipse cx="1330" cy="470" rx="14" ry="50"/>
-        </g>
-      </svg>
+      <img class="hero__img" src="assets/hero.jpg" alt="" fetchpriority="high" />
     </div>
 
     <div class="hero__content">
@@ -92,10 +60,6 @@
       </ul>
     </div>
 
-    <!-- playful floating dog -->
-    <div class="hero__dog" aria-hidden="true">
-      <svg viewBox="0 0 200 200" width="220" height="220"><use href="#dog"/></svg>
-    </div>
     <div class="scroll-cue" aria-hidden="true"><span></span></div>
   </section>
 
@@ -138,10 +102,10 @@
       </div>
       <div class="concept__visual reveal">
         <div class="photo photo--tall" data-caption="Le parc au petit matin">
-          <svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#scene-park"/></svg>
+          <img src="assets/parc.jpg" alt="Le parc arboré du domaine baigné de lumière au petit matin" loading="lazy" />
         </div>
-        <div class="photo photo--small" data-caption="Sieste à l'ombre">
-          <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#scene-rest"/></svg>
+        <div class="photo photo--small" data-caption="Bienvenue au club">
+          <img src="assets/puppy.jpg" alt="Jeune chien accueilli au domaine" loading="lazy" />
         </div>
       </div>
     </div>
@@ -257,7 +221,7 @@
               </div>
               <div class="app-ui__live">
                 <div class="app-ui__livehdr"><span class="live-dot"></span> EN DIRECT · Le grand pré</div>
-                <div class="app-ui__cam"><svg viewBox="0 0 340 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#scene-live"/></svg></div>
+                <div class="app-ui__cam"><img src="assets/live.jpg" alt="Chien en plein jeu, vu en direct depuis l'application" loading="lazy" /></div>
               </div>
               <div class="app-ui__mood">
                 <div class="mood"><span>😴</span><small>Sieste</small></div>
@@ -282,8 +246,8 @@
   <section class="domaine" id="domaine">
     <div class="wrap domaine__grid">
       <div class="domaine__visual reveal">
-        <div class="photo photo--wide" data-caption="Les hauteurs de Bordighera">
-          <svg viewBox="0 0 560 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#scene-domaine"/></svg>
+        <div class="photo photo--wide" data-caption="La Riviera, entre mer et collines">
+          <img src="assets/domaine.jpg" alt="Village coloré de la côte ligure surplombant la mer, près de Bordighera" loading="lazy" />
         </div>
       </div>
       <div class="domaine__text reveal">
