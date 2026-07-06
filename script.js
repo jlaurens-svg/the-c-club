@@ -22,6 +22,13 @@ nav.querySelectorAll('.nav__links a').forEach(a =>
   })
 );
 
+// --- Mémorise le choix de langue (respecté par la redirection de la page racine) ---
+document.querySelectorAll('.nav__lang a[data-lang]').forEach(a =>
+  a.addEventListener('click', () => {
+    try { localStorage.setItem('tcc-lang', a.dataset.lang); } catch (e) {}
+  })
+);
+
 // --- Reveal on scroll ---
 const revealEls = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
@@ -42,7 +49,8 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   if (!form.checkValidity()) { form.reportValidity(); return; }
   note.hidden = false;
-  const sent = document.documentElement.lang === 'en' ? 'Request sent ✓' : 'Demande envoyée ✓';
+  const L = document.documentElement.lang;
+  const sent = L === 'en' ? 'Request sent ✓' : L === 'it' ? 'Richiesta inviata ✓' : 'Demande envoyée ✓';
   form.querySelector('button[type="submit"]').textContent = sent;
   form.querySelectorAll('input, select, textarea').forEach(el => (el.disabled = true));
 });
